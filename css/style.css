@@ -47,20 +47,29 @@ header img{
 
 /*div.navbar_second*/
 section.navbar_second{
-	border:1px solid red;
 	margin: 0px 0px;
 }
 section.navbar_second div.img{
 }
 section.navbar_second ul{
-	border:1px solid blue;
+	vertical-align: top;
+	margin: 0px;
+	text-align: left;
+	float: left;
 }
 section.navbar_second ul li{
 	margin:0px 20px;
 	display: inline-block;
+	margin: 0px 0px;
+
 }
 section.navbar_second ul li a{
  text-decoration: none;
  color: #80828F;
  font-size: 1.3em;
+ padding:0px 10px;
+}
+section.navbar_second ul li a:hover{
+	background: orange;
+	color: white;
 }
