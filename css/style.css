@@ -1,9 +1,10 @@
 html,body{
 	margin: 0px;
 	padding:0px;
-	background: #F6F7F9;
+	
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
+	background: white;
 }
 
 /*Nav*/
@@ -11,6 +12,8 @@ nav{
 	color:#80828F;
 	font-size: 0.9em;	
 	height: 30px;
+	background: #F6F7F9;
+	padding: 5px 0px;
 }
 nav ul:nth-child(1){
 	float: left;
@@ -48,12 +51,27 @@ header img{
 /*div.navbar_second*/
 section.navbar_second{
 	margin: 0px 0px;
+	padding-bottom: -10px;
+	display: block;
+	margin-bottom: 40px;
 }
-section.navbar_second div.img{
+section.navbar_second img{
+	float: left;
+	position: relative;
+}
+/*Querys que evitan que el logo cambie de ubicacion al usarlo en dispositivos mas pequeños*/
+@media screen and (max-width: 500px) {
+   section.navbar_second img{
+    }
+}
+@media screen and (max-width: 600px) {
+   section.navbar_second img{
+     right: 0px;
+    }
 }
 section.navbar_second ul{
-	vertical-align: top;
-	margin: 0px;
+	vertical-align: bottom;
+	margin: 10px 0px;
 	text-align: left;
 	float: left;
 }
@@ -61,15 +79,59 @@ section.navbar_second ul li{
 	margin:0px 20px;
 	display: inline-block;
 	margin: 0px 0px;
-
+	font-weight: bold;
 }
 section.navbar_second ul li a{
- text-decoration: none;
- color: #80828F;
- font-size: 1.3em;
- padding:0px 10px;
+	 text-decoration: none;
+	 color: #80828F;
+	 font-size: 1.2em;
+	 padding:10px 10px;
 }
 section.navbar_second ul li a:hover{
 	background: orange;
 	color: white;
+}
+
+/*section.bloque*/
+section.bloque{
+	width: 100%;
+	height: 60px;
+	background: #FDAF20;
+	border:1px solid orange;
+	display: block;
+}
+section.bloque h1{
+	margin:15px 20px;
+	font-weight: bold;
+	color: white;	
+} 
+
+/*form.formSesion*/
+section.formSesion{
+	border:1px solid red;
+}
+section.formSesion .contenido{
+	border:1px solid #F6F7F9;
+	margin:40px auto;
+	width: 20%;
+	padding: 10px 2%;	
+	box-shadow: 2px 2px 20px gray;
+}
+section.formSesion .contenido p{
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+section.formSesion .contenido input{
+	background: #F6F7F9;
+	border-radius: 3px;
+	padding: 3px 3px;
+
+}
+section.formSesion .contenido input#botonLogin{
+	border-radius: 400px;
+}
+section.formSesion .contenido .mensajeAcceso{
+	border:1px solid orange;
+	text-align: center;
 }

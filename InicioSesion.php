@@ -20,14 +20,14 @@
 	 </ul>	
 	 <ul>
 	 	<li><a href="">Registrate</a></li>
-	 	<li><a href="InicioSesion.html">Incio de sesión</a></li>
+	 	<li><a href="">Incio de sesion</a></li>
 	 	<li><a href="">Contactenos</a></li>
 	 </ul>	 
 	</nav>
 	<!--/nav-->	
 		
 	<section class="navbar_second">
-		<img src="img/Logo.png" alt="">
+		<a href="Index.html"><img src="img/Logo.png" alt=""></a>
 		<ul>
 				<li><a href="">Inicio</a></li>
 			    <li><a href="">Quienes Somos</a></li>
@@ -35,12 +35,33 @@
 		</ul>
 	</section>	
 	<!--/div.principal-->
+	
+	<section class="bloque">
+			<h1>INICIO DE SESION</h1>
+	</section>
+	<!--/section.bloque-->
 
-
-	<header>
-		<img src="img/SubastBanner.jpg" alt="">
-	</header>
-	<!--/header-->
+	<section class="formSesion" action="Controlador.php" method="POST">
+		<div class="contenido">
+			<p>INICIO DE SESIÓN</p>
+			<form action="">
+				<div class="input-group">
+				  <input type="text" class="form-control" name="name" placeholder=" Name">			  
+				</div><br>
+				<div class="input-group">				 
+				  <input type="text" class="form-control" name="password" placeholder=" Password">
+				</div><br>
+				<input type=image id="botonLogin" src="img/BotonLogin.png" width="80" height="20">	
+					<!--div donde se mostrara un mensaje al tratar de loguearse-->
+					<div class="mensajeAcceso">
+						<?php
+	                        echo "<div class='alert alert-success'><strong>".echo 'Success';."</strong></div>";
+						?>
+					</div>		 
+			</form>		
+		</div>
+	</section>
+			
 
 
 	
