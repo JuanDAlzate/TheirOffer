@@ -1,7 +1,6 @@
 html,body{
 	margin: 0px;
-	padding:0px;
-	
+	padding:0px;	
 	font-family: 'Raleway', sans-serif;
 	font-size: 14px;
 	background: white;
@@ -88,7 +87,7 @@ section.navbar_second ul li a{
 	 padding:10px 10px;
 }
 section.navbar_second ul li a:hover{
-	background: orange;
+	background: #FDAF20;
 	color: white;
 }
 
@@ -106,7 +105,7 @@ section.bloque h1{
 	color: white;	
 } 
 
-/*form.formSesion*/
+/*section.formSesion*/
 section.formSesion{
 	border:1px solid red;
 }
@@ -125,13 +124,72 @@ section.formSesion .contenido p{
 section.formSesion .contenido input{
 	background: #F6F7F9;
 	border-radius: 3px;
-	padding: 3px 3px;
+	padding: 3px 3px;	
+	font-family: 'Raleway', sans-serif;
 
 }
 section.formSesion .contenido input#botonLogin{
-	border-radius: 400px;
+	border-radius: 30%;
+	background: #FDAF20;
+	font-weight: bolder;
+	padding: 2px 10px;
+	color: white;
 }
 section.formSesion .contenido .mensajeAcceso{
-	border:1px solid orange;
 	text-align: center;
+}
+
+/***Pagina PanelControl***/
+/*section.bloque ul.list_primary*/
+section.bloque ul.list_primary{
+	text-align: center;
+	border:1px solid white;
+	margin-top: -2px;
+}
+section.bloque ul.list_primary li{
+	display: inline-block;
+	margin:5px 10px;
+}
+section.bloque ul.list_primary li a{
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
+	font-size: 1.1em;
+}
+
+/*section.formSesion div.content_insert */
+section.formSesion div.content_insert{
+	margin: 40px 5%;
+}
+/*section.formSesion div.content_list*/
+section.formSesion div.content_list{
+	border:1px solid red;
+	width: 90%;	
+}
+section.formSesion div.content_list form {
+	text-align: center;
+	border:1px solid blue;
+}
+section.formSesion div.content_list form table{
+	border:1px solid red;
+	margin:0px auto;
+	width: 100%;
+}
+section.formSesion div.content_list form table td,tr{
+	border:1px solid black;
+}
+
+/*section.bloque  ul.list_secundary*/
+section.bloque ul.list_secundary{
+	margin-bottom: 10px;
+}
+section.bloque ul.list_secundary li{
+	display: inline-block;
+	margin:0px 10px;
+}
+section.bloque ul.list_secundary li a{
+	text-decoration: none;
+	font-size: 1em;
+	color: white;
+	font-weight: bolder;
 }
