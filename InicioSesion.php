@@ -52,10 +52,11 @@
 				  <input type="text" class="form-control" name="password" placeholder=" Password">
 				</div><br>
 				<input type=image id="botonLogin" src="img/BotonLogin.png" width="80" height="20">	
-					<!--div donde se mostrara un mensaje al tratar de loguearse-->
+				<!--div donde se mostrara un mensaje al tratar de loguearse-->
 					<div class="mensajeAcceso">
 						<?php
-	                        echo "<div class='alert alert-success'><strong>".echo 'Success';."</strong></div>";
+	                        echo "<div class='alert alert-success'><strong>".'Bienvenido'."</strong></div>";
+	                        echo "<div class='alert alert-danger'><strong>".'No puede acceder'."</strong></div>";
 						?>
 					</div>		 
 			</form>		
