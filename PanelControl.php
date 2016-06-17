@@ -97,15 +97,15 @@
 		<div class="contenido content_list">
 			<p>LISTA DE USUARIOS</p>
 			<form action="" method="post">
-				<table>
+				<table class="table">
 					<tr>
-						<td><strong>Identificación</strong></td>
-						<td><strong>Nombre</strong></td>
-						<td><strong>Apellido</strong></td>
-						<td><strong>Telefono</strong></td>
-						<td><strong>Dirección</strong></td>
-						<td><strong>Correo</strong></td>
-						<td><strong>Password</strong></td>
+						<td class="column-primary"><strong>Identificación</strong></td>
+						<td class="column-primary"><strong>Nombre</strong></td>
+						<td class="column-primary"><strong>Apellido</strong></td>
+						<td class="column-primary"><strong>Telefono</strong></td>
+						<td class="column-primary"><strong>Dirección</strong></td>
+						<td class="column-primary"><strong>Correo</strong></td>
+						<td class="column-primary"><strong>Password</strong></td>
 					</tr>
 					<tr>
 						<td><?php Listar('id_usuario'); ?></td>

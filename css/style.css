@@ -163,25 +163,24 @@ section.formSesion div.content_insert{
 }
 /*section.formSesion div.content_list*/
 section.formSesion div.content_list{
-	border:1px solid red;
 	width: 90%;	
 }
 section.formSesion div.content_list form {
 	text-align: center;
-	border:1px solid blue;
 }
 section.formSesion div.content_list form table{
-	border:1px solid red;
+	border:1px solid gray;
 	margin:0px auto;
 	width: 100%;
 }
-section.formSesion div.content_list form table td,tr{
-	border:1px solid black;
+
+section.formSesion div.content_list form table tr td.column-primary{
+	background:#FDAF20; 
 }
 
 /*section.bloque  ul.list_secundary*/
 section.bloque ul.list_secundary{
-	margin-bottom: 10px;
+	margin-top: -5px;
 }
 section.bloque ul.list_secundary li{
 	display: inline-block;
