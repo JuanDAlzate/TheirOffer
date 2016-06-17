@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!--Enlace que permite utilizar las fuentes de google-->
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<!--Link que permite enlazar el archivo de javascript-->
+	<script type="text/javascript" src="js/main.js"></script>
+
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -34,12 +37,12 @@
 	
 	<section class="bloque">
 			<ul class="list_primary">
-				<li><a href="" onclick="ver(1)">Usuarios</a></li>
+				<li><a href="" onmouseover="verOpcion()">Usuarios</a></li>
 				<li><a href="">Productos</a></li>
 				<li><a href="">Categorias</a></li>				
 			</ul>
-			<ul class="list_secundary">
-				<li><a href="">Crear usuario</a></li>
+			<ul id="list_secundary" class="list_secundary">
+				<li><a href="" onmouseover="CrearUsuario()">Crear usuario</a></li>
 				<li><a href="">Ver los usuarios</a></li>
 				<li><a href="">Eliminar usuario</a></li>				
 			</ul>

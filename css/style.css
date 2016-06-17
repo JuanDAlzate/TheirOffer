@@ -181,6 +181,7 @@ section.formSesion div.content_list form table tr td.column-primary{
 /*section.bloque  ul.list_secundary*/
 section.bloque ul.list_secundary{
 	margin-top: -5px;
+	display: none;
 }
 section.bloque ul.list_secundary li{
 	display: inline-block;
