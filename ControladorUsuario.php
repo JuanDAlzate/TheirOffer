@@ -66,6 +66,22 @@
 		}*/
 	}
 
+	//Funcion que permite listar un usuario en especifico atraves del id
+	function buscarUsuario($id){
+		include("Conexion.php");
+
+		$consulta="SELECT * FROM usuario WHERE id_usuario='$id'";
+		$resultado=$conexion->query($consulta);
+
+		if(mysqli_num_rows($resultado)>=1){
+			while($usuarios=$resultado->fetch_array(MYSQLI_BOTH)){
+				echo "<tr><td class='name'>".$usuarios['id_usuario']."</td><td>".$usuarios['nombre']."</td><td>".$usuarios['apellido']."</td><td>".$usuarios['telefono']."</td><td>".$usuarios['direccion']."</td><td>".$usuarios['correo']."</td><td>".$usuarios['password']."</td></tr>";
+			}
+		}else{
+				echo "No hay ningun usuario registrado con este usuario";
+		}	
+	}
+
 	//funcion que permite actualizar los datos de un usuarios
 	function Update($name,$lastName,$telefono,$dir,$email,$pass,$id){
 		include('Conexion.php');

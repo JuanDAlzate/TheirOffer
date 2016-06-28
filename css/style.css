@@ -108,6 +108,7 @@ section.bloque h1{
 /*section.formSesion*/
 section.formSesion{
 	border:1px solid red;
+	background-image: url("../img/Background.jpg"); 
 }
 section.formSesion .contenido{
 	border:1px solid #F6F7F9;
@@ -125,12 +126,29 @@ section.formSesion .contenido .input-group{
 	text-align: center;
 }
 section.formSesion .contenido input{
-	background: #F6F7F9;
+	background: rgba(246,247,249,0.1); ;
 	border-radius: 3px;
 	padding: 3px 3px;	
 	font-family: 'Raleway', sans-serif;
-
 }
+/*Codigo que permite cambiar el estilo al placeholder de los inputs*/
+*::-webkit-input-placeholder {
+    /* Google Chrome y Safari */
+    color: #2D2D2D;
+}
+*:-moz-placeholder {
+    /* Firefox anterior a 19 */
+    color: #2D2D2D;
+}
+*::-moz-placeholder {
+    /* Firefox 19 y superior */
+    color: #2D2D2D;
+}
+*:-ms-input-placeholder {
+    /* Internet Explorer 10 y superior */
+    color: #2D2D2D;
+}
+
 section.formSesion .contenido div#botones{
 	text-align: center;
 	margin: 0px auto;
@@ -176,7 +194,7 @@ section.formSesion div.content_list form table{
 }
 
 section.formSesion div.content_list form table tr td.column-primary{
-	background:#FDAF20; 
+	background:#F6F7F9; 
 }
 
 /*section.bloque  ul.list_secundary*/

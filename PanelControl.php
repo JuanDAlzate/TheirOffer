@@ -88,7 +88,8 @@
 				<div id="botones">
 					<input type=submit id="botonesSubmit" name="botonLogin" value="CREATE">
 					<input type=submit id="botonesSubmit" name="botonEliminar" value="ELIMINAR">
-					<input type="submit" id="botonesSubmit" name="botonActualizar" value="UPDATE">		
+					<input type="submit" id="botonesSubmit" name="botonActualizar" value="UPDATE">
+					<input type="submit" id="botonesSubmit" name="botonBuscarUsuario" value="BUSCAR USUARIO">
 					<input type="reset" id="botonesSubmit" value="LIMPIAR">
 				</div>
 				
@@ -137,7 +138,7 @@
 		<div class="contenido content_list">
 			<p>LISTA DE USUARIOS</p>
 			<form action="" method="post">
-				<table class="table">
+				<table>
 					<tr>
 						<td class="column-primary"><strong>Identificación</strong></td>
 						<td class="column-primary"><strong>Nombre</strong></td>
@@ -147,7 +148,15 @@
 						<td class="column-primary"><strong>Correo</strong></td>
 						<td class="column-primary"><strong>Password</strong></td>
 					</tr>
-					<?php Listar('id_usuario'); ?>
+					<?php  
+							//Decision que permite eliminar al accionar el boton eliminar
+							if(isset($_POST['botonBuscarUsuario'])) {
+									$id=$_POST['id'];
+									buscarUsuario($id);
+								}else{
+									Listar('id_usuario');
+								}	
+					?>
 					<!--<tr>
 
 						<td><a href="#" class="name"><?php Listar('id_usuario'); ?></a></td>
