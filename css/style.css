@@ -108,7 +108,9 @@ section.bloque h1{
 /*section.formSesion*/
 section.formSesion{
 	border:1px solid red;
-	background-image: url("../img/Background.jpg"); 
+	background-image: url("../img/Background4.jpg"); 
+	background-size: 100%;
+	background-repeat: repeat;
 }
 section.formSesion .contenido{
 	border:1px solid #F6F7F9;
