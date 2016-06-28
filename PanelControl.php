@@ -11,8 +11,18 @@
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<!--Link que permite enlazar el archivo de javascript-->
 	<script type="text/javascript" src="js/main.js"></script>
+	<!--Link que permite enlazar el archivo de jquery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+			$(document).ready(function(){
+		   			$(".name").click(function(){
+			        var value = $(this).text();
+			        $('#identificacion').val(value);
+		    	});
+		});
+	</script>
 </head>
 <body>
 	<nav style="display:block;">
@@ -54,7 +64,7 @@
 			<p>REGISTRO DE USUARIOS</p>
 			<form action="" action="" method="post">
 				<div class="input-group">
-				  <input type="text" class="form-control" name="id" placeholder=" Identificación">			  
+				  <input type="text" class="form-control" id="identificacion" name="id" placeholder=" Identificación">			  
 				</div><br>
 				<div class="input-group">				 
 				  <input type="text" class="form-control" name="name" placeholder=" Nombre">
@@ -74,13 +84,20 @@
 				<div class="input-group">				 
 				  <input type="text" class="form-control" name="pass" placeholder=" Password">
 				</div><br>
-				<input type=submit id="botonLogin" name="botonLogin" value="CREATE"><input id="botonLogin" type="reset" value="LIMPIAR"><br>
+
+				<div id="botones">
+					<input type=submit id="botonesSubmit" name="botonLogin" value="CREATE">
+					<input type=submit id="botonesSubmit" name="botonEliminar" value="ELIMINAR">
+					<input type="submit" id="botonesSubmit" name="botonActualizar" value="UPDATE">		
+					<input type="reset" id="botonesSubmit" value="LIMPIAR">
+				</div>
+				
 				<!--div donde se mostrara un mensaje al tratar de loguearse-->
 					<div class="mensajeAcceso">
 						<?php
+							//Decision que permite insertar al accionar el boton insertar
 							if(isset($_POST['botonLogin'])) {
 
-							        include("ControladorUsuario.php");
 							        $id=$_POST['id'];
 							        $name=$_POST['name'];
 							        $lastName=$_POST['lastName'];
@@ -89,8 +106,28 @@
 							        $email=$_POST['email'];
 							        $pass=$_POST['pass'];
 							        //Funcion que permite insertar un usuario a la base de datos
-							        Insertar($id,$name,$lastName,$phone,$address,$email,$pass);
+							        Insertar($id,$name,$lastName,$phone,$address,$email,$pass);	        
 							}
+
+							//Decision que permite eliminar al accionar el boton eliminar
+							if(isset($_POST['botonEliminar'])) {
+									$id=$_POST['id'];
+									Delete($id);		
+							}
+
+							//Decision que permite actualizar un usuario al accionar el boton update
+							if(isset($_POST['botonActualizar'])) {
+
+									$id=$_POST['id'];
+							        $name=$_POST['name'];
+							        $lastName=$_POST['lastName'];
+							        $phone=$_POST['phone'];
+							        $address=$_POST['address'];
+							        $email=$_POST['email'];
+							        $pass=$_POST['pass'];
+									Update($name,$lastName,$phone,$address,$email,$pass,$id);
+								}
+							
 						?>						
 				    </div>
 			</form>		
@@ -110,15 +147,17 @@
 						<td class="column-primary"><strong>Correo</strong></td>
 						<td class="column-primary"><strong>Password</strong></td>
 					</tr>
-					<tr>
-						<td><?php Listar('id_usuario'); ?></td>
-						<td><?php Listar('nombre'); ?></td>
-						<td><?php Listar('apellido'); ?></td>
-						<td><?php Listar('telefono'); ?></td>
-						<td><?php Listar('direccion'); ?></td>
-						<td><?php Listar('correo'); ?></td>
-						<td><?php Listar('password'); ?></td>						
-					</tr>
+					<?php Listar('id_usuario'); ?>
+					<!--<tr>
+
+						<td><a href="#" class="name"><?php Listar('id_usuario'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('nombre'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('apellido'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('telefono'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('direccion'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('correo'); ?></a></td>
+						<td><a href="#" class=""><?php Listar('password'); ?></a></td>		
+					</tr>-->	
 				</table>
 		</div>
 
