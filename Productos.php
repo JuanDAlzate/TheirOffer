@@ -36,7 +36,7 @@
 	 </ul>	
 	 <ul>
 	 	<li><a href=""></a></li>
-	 	<li><a href="InicioSesion.php"></a></li>
+	 	<li><a href="InicioSesion.php"></a></li>	 	
 	 	<li><a href="">Hola <?php echo $_SESSION['name']; ?></a></li>
 	 	<li><a href="ControladorUsuario.php?accion=borrar">Cerrar sesión</a></li>
 	 </ul>	 
@@ -63,12 +63,8 @@
 	<!--/section.bloque-->
 
 	<section class="formSesion" >
-		<div class="contenido content_insert">
-		    <p><?php                                                                                        
-		    		   $user=$_SESSION['user'];
-		    		                                                           
-				  ?></p>
-			<p>REGISTRO DE USUARIOS</p>
+		<div class="contenido form-product">
+			<p>OFERTAR PRODUCTO</p>
 			<form action="" action="" method="post">
 				<div class="input-group">
 				  <input type="text" class="form-control" id="identificacion" name="id" placeholder=" Identificación">			  

@@ -107,12 +107,39 @@
 		$row=$resultado->num_rows;
 
 		if($row!=0){
+			$consulta="select id_usuario,nombre from usuario where correo='$correo' and password='$password'";
+			$resultado=$conexion->query($consulta);
+			$usuarios=$resultado->fetch_array(MYSQLI_BOTH);
+			//Iniciacion de variable de sesion
+			SESSION_START();
+			$_SESSION['user']=$usuarios['id_usuario'];
+			$_SESSION['name']=$usuarios['nombre'];
 			header('Location: PanelControl.php');
 		}else{
 			echo '<script language="javascript">alert("Compruebe sus credenciales");</script>'; 
 			echo '<script>window.location.href="InicioSesion.php";</script>';			
 		}
 	}
+
+	//Funcion que permitira destruir la session creada
+		function destruirSesion(){
+			SESSION_START();
+			SESSION_UNSET();
+			SESSION_DESTROY();		
+			header('Location: InicioSesion.php');
+			}
+            
+            if(isset($_REQUEST["accion"])){
+            	if($accion="borrar"){
+				echo '<script language="javascript">alert("Has terminado la sesion");</script>';
+				destruirSesion();
+			}else{
+				echo '<script language="javascript">alert("Puedes ingresar");</script>';
+			}
+		}else{
+				echo '<script language="javascript">alert("No se ha pulsado el boton de cerrar sesion hasta ahora");</script>';	
+		}
+			
 
 		//Condicion para comprobar que se este ejecutando la insercion correctamente
 		/*$id=41;
@@ -124,6 +151,7 @@
 		$pass="123";
 		Update($name,$lastName,$telefono,$dir,$email,$pass,$id);
 		//insertar($ide,$nom,$ape,$tel,$dir,$cor,$pass);*/
+		
 
  ?>
 	
