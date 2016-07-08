@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Inicio | Their_Offer</title>
+	<title>Producto | Their_Offer</title>
 	<!--Enlace al archivo de bootstrap-->
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -50,7 +50,7 @@
 	
 	<section class="bloque">
 			<ul class="list_primary">
-				<li><a href="" onmouseover="verOpcion()">Usuarios</a></li>
+				<li><a href="PanelControl.php" onmouseover="verOpcion()">Usuarios</a></li>
 				<li><a href="">Productos</a></li>
 				<li><a href="">Categorias</a></li>				
 			</ul>
@@ -67,27 +67,23 @@
 			<p>OFERTAR PRODUCTO</p>
 			<form action="" action="" method="post">
 				<div class="input-group">
-				  <input type="text" class="form-control" id="identificacion" name="id" placeholder=" Identificación">			  
+				  <label for="categoria">Categoria: 				 
+						  <select id="categoria" name="categoria" class="form-control">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+						  </select>
+				  </label>
 				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="name" placeholder=" Nombre">
+				<div class="input-group">	
+				  <label for="imagen">Foto del producto: <input type="file" class="form-control" name="image" placeholder=" Foto del producto"></label>				  
 				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="lastName" placeholder=" Apellido">
+				<div class="input-group">	
+				  <label for="imagen">Precio: <input type="number" class="form-control" name="precio" placeholder=" Valor del producto"></label>				  
 				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="phone" placeholder=" Telefono">
-				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="address" placeholder=" Direccion">
-				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="email" placeholder=" Correo">
-				</div><br>
-				<div class="input-group">				 
-				  <input type="text" class="form-control" name="pass" placeholder=" Password">
-				</div><br>
-
+				
 				<div id="botones">
 					<input type=submit id="botonesSubmit" name="botonLogin" value="CREATE">
 					<input type=submit id="botonesSubmit" name="botonEliminar" value="ELIMINAR">
@@ -141,7 +137,7 @@
 		<div class="contenido content_list">
 			<p>LISTA DE USUARIOS</p>
 			<form action="" method="post">
-				<table>
+				<table class="table">
 					<tr>
 						<td class="column-primary"><strong>Identificación</strong></td>
 						<td class="column-primary"><strong>Nombre</strong></td>
@@ -219,10 +215,10 @@
 		</div>	
 		<div class="content">
 			<strong><h3>ETIQUETAS</h3></strong>
-			<div class="label">subasta</div>
-			<div class="label">venta</div>
-			<div class="label">compra</div>
-			<div class="label">ofertas</div>
+			<div class="label">#subasta</div>
+			<div class="label">#venta</div>
+			<div class="label">#compra</div>
+			<div class="label">#ofertas</div>
 		</div>	
 		<div class="sub-footer">
 			<h4>Todos los derechos reservados TheirOffers</h2>

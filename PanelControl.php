@@ -50,8 +50,8 @@
 	
 	<section class="bloque">
 			<ul class="list_primary">
-				<li><a href="" onmouseover="verOpcion()">Usuarios</a></li>
-				<li><a href="">Productos</a></li>
+				<li><a href="PanelControl.php" onmouseover="verOpcion()">Usuarios</a></li>
+				<li><a href="Productos.php">Productos</a></li>
 				<li><a href="">Categorias</a></li>				
 			</ul>
 			<ul id="list_secundary" class="list_secundary">
@@ -223,10 +223,10 @@
 		</div>	
 		<div class="content">
 			<strong><h3>ETIQUETAS</h3></strong>
-			<div class="label">subasta</div>
-			<div class="label">venta</div>
-			<div class="label">compra</div>
-			<div class="label">ofertas</div>
+			<div class="label">#subasta</div>
+			<div class="label">#venta</div>
+			<div class="label">#compra</div>
+			<div class="label">#ofertas</div>
 		</div>	
 		<div class="sub-footer">
 			<h4>Todos los derechos reservados TheirOffers</h2>

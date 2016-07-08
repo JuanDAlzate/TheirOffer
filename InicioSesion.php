@@ -114,10 +114,10 @@
 		</div>	
 		<div class="content">
 			<strong><h3>ETIQUETAS</h3></strong>
-			<div class="label">subasta</div>
-			<div class="label">venta</div>
-			<div class="label">compra</div>
-			<div class="label">ofertas</div>
+			<div class="label">#subasta</div>
+			<div class="label">#venta</div>
+			<div class="label">#compra</div>
+			<div class="label">#ofertas</div>
 		</div>	
 		<div class="sub-footer">
 			<h4>Todos los derechos reservados TheirOffers</h2>

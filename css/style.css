@@ -106,7 +106,7 @@ section.bloque h1{
 
 /*section.formSesion*/
 section.formSesion{
-	border:1px solid #FDAF20;
+	border-top:1px solid #FDAF20;
 	background-image: url("../img/Background6.jpg"); 
 	background-size: 200%;
 	background-repeat:repeat;
@@ -117,6 +117,9 @@ section.formSesion .contenido{
 	width: 30%;
 	padding: 10px 2%;	
 	box-shadow: 4px 4px 30px #FDAF20;
+	background-image: url("../img/Background6.jpg"); 
+	background-size: 100%;
+	background-repeat: repeat;
 }
 section.formSesion .contenido p{
 	text-align: center;
@@ -126,11 +129,12 @@ section.formSesion .contenido p{
 section.formSesion .contenido .input-group{
 	text-align: center;
 }
-section.formSesion .contenido input{
-	background: rgba(246,247,249,0.1); ;
+section.formSesion .contenido input,select{
+	background: rgba(246,247,249,0.1); 
 	border-radius: 3px;
 	padding: 3px 3px;	
 	font-family: 'Raleway', sans-serif;
+	background: #F6F7F9;
 }
 /*Codigo que permite cambiar el estilo al placeholder de los inputs*/
 *::-webkit-input-placeholder {
@@ -217,13 +221,19 @@ section.bloque ul.list_secundary li a{
 
 /****Page Products*****/
 /*form-product*/
-section .form-product{
- 
+section.formSesion .form-product{
+  width: 60%;
+}
+section.formSesion .form-product form{
+  padding: 10px 50px;
+  font-weight: bolder;
+}
+section.formSesion .form-product form div.input-group{
+	text-align: left;
 }
 
 /***section.follow***/
 section.follow{
-	border:1px solid red;
 	padding:30px 0px;
 	background: #F6F7F9;
 	margin-bottom: 10px;
@@ -284,6 +294,8 @@ footer div.content div.label{
 	font-weight: bolder;
 	display: inline-block;
 	padding: 2px 6px;
+	margin-bottom: 5px;
+	text-align: left;
 }
 footer div.sub-footer{
 	background: #EF8D01;
